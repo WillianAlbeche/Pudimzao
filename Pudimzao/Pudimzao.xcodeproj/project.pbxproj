@@ -53,8 +53,8 @@
 		CD0417AE2755443A00ED441B /* Pudimzao */ = {
 			isa = PBXGroup;
 			children = (
-				CD0417BF2756960800ED441B /* RingView.swift */,
 				CD0417AF2755443A00ED441B /* PudimzaoApp.swift */,
+				CD0417BF2756960800ED441B /* RingView.swift */,
 				CD0417B12755443A00ED441B /* ContentView.swift */,
 				CD0417B32755443B00ED441B /* Assets.xcassets */,
 				CD0417B52755443B00ED441B /* Preview Content */,
