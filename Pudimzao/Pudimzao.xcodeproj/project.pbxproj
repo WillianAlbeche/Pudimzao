@@ -11,6 +11,7 @@
 		CD0417B22755443A00ED441B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0417B12755443A00ED441B /* ContentView.swift */; };
 		CD0417B42755443B00ED441B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0417B32755443B00ED441B /* Assets.xcassets */; };
 		CD0417B72755443B00ED441B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0417B62755443B00ED441B /* Preview Assets.xcassets */; };
+		CD0417C02756960800ED441B /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0417BF2756960800ED441B /* RingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		CD0417B12755443A00ED441B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CD0417B32755443B00ED441B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD0417B62755443B00ED441B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD0417BF2756960800ED441B /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		CD0417AE2755443A00ED441B /* Pudimzao */ = {
 			isa = PBXGroup;
 			children = (
+				CD0417BF2756960800ED441B /* RingView.swift */,
 				CD0417AF2755443A00ED441B /* PudimzaoApp.swift */,
 				CD0417B12755443A00ED441B /* ContentView.swift */,
 				CD0417B32755443B00ED441B /* Assets.xcassets */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0417C02756960800ED441B /* RingView.swift in Sources */,
 				CD0417B22755443A00ED441B /* ContentView.swift in Sources */,
 				CD0417B02755443A00ED441B /* PudimzaoApp.swift in Sources */,
 			);
