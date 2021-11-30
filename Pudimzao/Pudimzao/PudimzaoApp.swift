@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct PudimzaoApp: App {
+    let bgcolor = Color("Background")
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack{
+                bgcolor
+                    .edgesIgnoringSafeArea(.top)
+                MainView()
+            }
         }
     }
 }
