@@ -9,8 +9,11 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
+        VStack{
         Text("voce é o pudim do(a) \(getPudimType())")
             .foregroundColor(.white)
+        RingView()
+        }
     }
 }
 
