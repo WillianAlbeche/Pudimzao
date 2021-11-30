@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38197B1B2756A6C000857AAF /* PudimTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38197B1A2756A6C000857AAF /* PudimTypes.swift */; };
+		38197B1D2756A96100857AAF /* PudimService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38197B1C2756A96100857AAF /* PudimService.swift */; };
+		38197B1F2756A97B00857AAF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38197B1E2756A97B00857AAF /* MainView.swift */; };
+		38197B212756B16C00857AAF /* ButtonModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38197B202756B16C00857AAF /* ButtonModelView.swift */; };
 		CD0417B02755443A00ED441B /* PudimzaoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0417AF2755443A00ED441B /* PudimzaoApp.swift */; };
-		CD0417B22755443A00ED441B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0417B12755443A00ED441B /* ContentView.swift */; };
 		CD0417B42755443B00ED441B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0417B32755443B00ED441B /* Assets.xcassets */; };
 		CD0417B72755443B00ED441B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0417B62755443B00ED441B /* Preview Assets.xcassets */; };
 		CD0417C02756960800ED441B /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0417BF2756960800ED441B /* RingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38197B1A2756A6C000857AAF /* PudimTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PudimTypes.swift; sourceTree = "<group>"; };
+		38197B1C2756A96100857AAF /* PudimService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PudimService.swift; sourceTree = "<group>"; };
+		38197B1E2756A97B00857AAF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		38197B202756B16C00857AAF /* ButtonModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModelView.swift; sourceTree = "<group>"; };
 		CD0417AC2755443A00ED441B /* Pudimzao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pudimzao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0417AF2755443A00ED441B /* PudimzaoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PudimzaoApp.swift; sourceTree = "<group>"; };
-		CD0417B12755443A00ED441B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CD0417B32755443B00ED441B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD0417B62755443B00ED441B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD0417BF2756960800ED441B /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
@@ -34,6 +40,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38197B162756A5EE00857AAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				38197B1A2756A6C000857AAF /* PudimTypes.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		38197B182756A69500857AAF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD0417BF2756960800ED441B /* RingView.swift */,
+				38197B1E2756A97B00857AAF /* MainView.swift */,
+				38197B202756B16C00857AAF /* ButtonModelView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		38197B192756A6AE00857AAF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				38197B1C2756A96100857AAF /* PudimService.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		CD0417A32755443A00ED441B = {
 			isa = PBXGroup;
 			children = (
@@ -53,9 +85,10 @@
 		CD0417AE2755443A00ED441B /* Pudimzao */ = {
 			isa = PBXGroup;
 			children = (
-				CD0417BF2756960800ED441B /* RingView.swift */,
+				38197B162756A5EE00857AAF /* Models */,
+				38197B182756A69500857AAF /* Views */,
+				38197B192756A6AE00857AAF /* ViewModels */,
 				CD0417AF2755443A00ED441B /* PudimzaoApp.swift */,
-				CD0417B12755443A00ED441B /* ContentView.swift */,
 				CD0417B32755443B00ED441B /* Assets.xcassets */,
 				CD0417B52755443B00ED441B /* Preview Content */,
 			);
@@ -141,8 +174,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD0417C02756960800ED441B /* RingView.swift in Sources */,
-				CD0417B22755443A00ED441B /* ContentView.swift in Sources */,
+				38197B212756B16C00857AAF /* ButtonModelView.swift in Sources */,
+				38197B1D2756A96100857AAF /* PudimService.swift in Sources */,
 				CD0417B02755443A00ED441B /* PudimzaoApp.swift in Sources */,
+				38197B1F2756A97B00857AAF /* MainView.swift in Sources */,
+				38197B1B2756A6C000857AAF /* PudimTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
