@@ -11,12 +11,10 @@ struct MainView: View {
     
     @State var percent: CGFloat = 0
     var body: some View {
-<<<<<<< HEAD
         VStack{
         Text("voce é o pudim do(a) \(getPudimType())")
             .foregroundColor(.white)
         RingView()
-=======
         VStack {
             Text("voce é o pudim do(a) \(getPudimType())")
                 .foregroundColor(.white)
@@ -47,7 +45,6 @@ struct MainView: View {
                     timer.invalidate()
                 }
             }
->>>>>>> c0d287dec62c6f025c7db66fa54407f8937634df
         }
     }
 }
