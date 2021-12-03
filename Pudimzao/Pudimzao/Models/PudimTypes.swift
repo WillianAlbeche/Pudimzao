@@ -27,7 +27,7 @@ struct PudimTypes{
         "romance",
         "satisfação",
         "surpresa",
-        "tédio",
-        "tristeza"
+        "entediado",
+        "triste"
     ]
 }

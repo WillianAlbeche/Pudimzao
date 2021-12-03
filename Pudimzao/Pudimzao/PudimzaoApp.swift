@@ -13,8 +13,8 @@ struct PudimzaoApp: App {
     var body: some Scene {
         WindowGroup {
             ZStack{
-//                bgcolor
-//                    .edgesIgnoringSafeArea(.top)
+                bgcolor
+                    .edgesIgnoringSafeArea(.top)
                 MainView()
             }
         }
