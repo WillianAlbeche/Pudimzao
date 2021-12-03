@@ -18,7 +18,6 @@ struct MainView: View {
             PudimAsk(screen: $screen)
         case 2:
             PudimLoading(screen: $screen)
-                .transition(.scale)
         case 3:
             PudimTipos(screen: $screen)
         case 4:
@@ -51,7 +50,10 @@ struct PudimAsk: View {
     
     private func normalizeSoundLevel(level: Float) -> CGFloat {
         let level = max(0.1, CGFloat(level) + 7) / 2 // between 0.1 and 25
-        
+        if(level >= 2){
+            screen = 2
+        }
+
         return CGFloat(level * (300 / 25)) // scaled to max at 300 (our height of our bar)
     }
     
@@ -70,9 +72,6 @@ struct PudimAsk: View {
                         .font(.largeTitle)
                     GradientText(text: "bem alto")
                         .font(.title)
-                }
-                Button("Clique"){
-                    screen = 2
                 }
             }
             HStack(spacing: 4) {
@@ -103,8 +102,7 @@ struct PudimLoading: View {
     @Binding var screen: Int
     var body: some View {
         VStack{
-            Text("voce é o pudim do(a) \(getPudimType())")
-                .foregroundColor(.white)
+//            Text("voce é o pudim do(a) \(getPudimType())")
             RingView()
         }
     }
