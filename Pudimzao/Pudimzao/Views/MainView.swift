@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct MainView: View {
-    
-    @State var percent: CGFloat = 0
     var body: some View {
         VStack{
         Text("voce é o pudim do(a) \(getPudimType())")
             .foregroundColor(.white)
         RingView()
+<<<<<<< HEAD
         VStack {
             Text("voce é o pudim do(a) \(getPudimType())")
                 .foregroundColor(.white)
@@ -45,6 +44,8 @@ struct MainView: View {
                     timer.invalidate()
                 }
             }
+=======
+>>>>>>> parent of 24d26bc (sinceramente n me lembro)
         }
     }
 }
