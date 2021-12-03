@@ -17,7 +17,7 @@ struct RingView: View {
         "Compartilhando seu grito com terceiros..."
         
     ]
-    var valor = Bool.random()
+    var valor = Int.random(in: 1..<6)
     @State private var loadingPhraseIndex: String = "Pudimzando seu grito..."
     @State var nIndex = 0
     @State var percent: CGFloat = 0
@@ -33,7 +33,8 @@ struct RingView: View {
                         Circle()
                             .trim(from: 0, to: percent)
                             .stroke(style: StrokeStyle(lineWidth: 15, lineCap: .round, lineJoin:.round))
-                            .fill(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.9942818284, green: 0, blue: 0.5605643392, alpha: 1)), Color(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1))]), startPoint: .bottomLeading , endPoint: .topTrailing))
+                            .fill(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1, green: 0.7843137255, blue: 0.01568627451, alpha: 1)), Color(#colorLiteral(red: 0.9960784314, green: 0.8705882353, blue: 0.5294117647, alpha: 1)), Color(#colorLiteral(red: 0.4941176471, green: 0.2117647059, blue: 0.1254901961, alpha: 1))]), startPoint: .bottomLeading , endPoint: .topTrailing))
+                            .shadow(color: Color(#colorLiteral(red: 0.4941176471, green: 0.2117647059, blue: 0.1254901961, alpha: 1)), radius:100)
                     )
                 
                 Text(loadingPhraseIndex)
@@ -58,6 +59,7 @@ struct RingView: View {
                     Text("Start")
                 }
             }
+            
         }
         
     }
@@ -68,14 +70,26 @@ struct RingView: View {
         _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
             withAnimation() {
                 switch self.valor {
-                case true:
+                case 1:
                     self.percent += 0.01
                     print(valor)
-                case false:
+                case 2:
+                    self.percent += 0.01
+                    print(valor)
+                case 3:
+                    self.percent += 0.01
+                    print(valor)
+                case 4:
+                    self.percent += 0.01
+                    print(valor)
+                case 5:
                     self.percent += 0.001
                     print(valor)
-                }
-                //self.percent += 0.001
+                default:
+                    self.percent += 0.01
+                    print(valor)
+                    
+                }                //self.percent += 0.001
                 if self.percent >= 5 {
                     timer.invalidate()
                 }
