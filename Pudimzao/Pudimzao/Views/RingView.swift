@@ -44,22 +44,6 @@ struct RingView: View {
                 Text("pudimzando voce ").font(.system(size: 20))
                 
             }
-            HStack{
-                
-                Button{
-                    percent = 100
-                    
-                } label: {
-                    Text("Finish")
-                }
-                
-                Button{
-                    self.startLoading()
-                    
-                } label: {
-                    Text("Start")
-                }
-            }
         }
         
     }

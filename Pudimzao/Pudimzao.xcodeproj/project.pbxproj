@@ -11,6 +11,7 @@
 		38197B1D2756A96100857AAF /* PudimService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38197B1C2756A96100857AAF /* PudimService.swift */; };
 		38197B1F2756A97B00857AAF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38197B1E2756A97B00857AAF /* MainView.swift */; };
 		38197B212756B16C00857AAF /* ButtonModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38197B202756B16C00857AAF /* ButtonModelView.swift */; };
+		38CE11B1275A9CD500CDA2AF /* MicrophoneMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CE11B0275A9CD500CDA2AF /* MicrophoneMonitor.swift */; };
 		CD0417B02755443A00ED441B /* PudimzaoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0417AF2755443A00ED441B /* PudimzaoApp.swift */; };
 		CD0417B42755443B00ED441B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0417B32755443B00ED441B /* Assets.xcassets */; };
 		CD0417B72755443B00ED441B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0417B62755443B00ED441B /* Preview Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		38197B1C2756A96100857AAF /* PudimService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PudimService.swift; sourceTree = "<group>"; };
 		38197B1E2756A97B00857AAF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		38197B202756B16C00857AAF /* ButtonModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModelView.swift; sourceTree = "<group>"; };
+		38CE11B0275A9CD500CDA2AF /* MicrophoneMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneMonitor.swift; sourceTree = "<group>"; };
 		CD0417AC2755443A00ED441B /* Pudimzao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pudimzao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0417AF2755443A00ED441B /* PudimzaoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PudimzaoApp.swift; sourceTree = "<group>"; };
 		CD0417B32755443B00ED441B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		38CE11AF275A9CC600CDA2AF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				38CE11B0275A9CD500CDA2AF /* MicrophoneMonitor.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CD0417A32755443A00ED441B = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 		CD0417AE2755443A00ED441B /* Pudimzao */ = {
 			isa = PBXGroup;
 			children = (
+				38CE11AF275A9CC600CDA2AF /* Services */,
 				38197B162756A5EE00857AAF /* Models */,
 				38197B182756A69500857AAF /* Views */,
 				38197B192756A6AE00857AAF /* ViewModels */,
@@ -177,6 +188,7 @@
 				38197B212756B16C00857AAF /* ButtonModelView.swift in Sources */,
 				38197B1D2756A96100857AAF /* PudimService.swift in Sources */,
 				CD0417B02755443A00ED441B /* PudimzaoApp.swift in Sources */,
+				38CE11B1275A9CD500CDA2AF /* MicrophoneMonitor.swift in Sources */,
 				38197B1F2756A97B00857AAF /* MainView.swift in Sources */,
 				38197B1B2756A6C000857AAF /* PudimTypes.swift in Sources */,
 			);
@@ -312,6 +324,7 @@
 				DEVELOPMENT_TEAM = 76N3ST5C2U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We use your microphone to detect your wonderful shout and then decipher, through obscure and complex technologies, what kind of pudding you are.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -341,6 +354,7 @@
 				DEVELOPMENT_TEAM = 76N3ST5C2U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We use your microphone to detect your wonderful shout and then decipher, through obscure and complex technologies, what kind of pudding you are.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
