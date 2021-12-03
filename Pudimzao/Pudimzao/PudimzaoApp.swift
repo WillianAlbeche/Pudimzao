@@ -14,7 +14,7 @@ struct PudimzaoApp: App {
         WindowGroup {
             ZStack{
                 bgcolor
-                    .edgesIgnoringSafeArea(.top)
+                    .edgesIgnoringSafeArea(.all)
                 MainView()
             }
         }
