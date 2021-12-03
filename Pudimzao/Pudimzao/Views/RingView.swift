@@ -8,55 +8,104 @@
 import SwiftUI
 
 struct RingView: View {
+    private var loadingPhrases: [String] = [
+        "Pudimzando seu grito...",
+        "Pudimzando você...",
+        "Rindo do seu grito...",
+        "Pudimzando sua familia...",
+        "Pudimzando isso...",
+        "Compartilhando seu grito com terceiros..."
+        
+    ]
+    var valor = Int.random(in: 1..<6)
+    @State private var loadingPhraseIndex: String = "Pudimzando seu grito..."
+    @State var nIndex = 0
     @State var percent: CGFloat = 0
     @State private var showingAlert = false
     var body: some View {
         
         VStack {
             ZStack {
-                
                 Circle()
-                    .foregroundColor(Color(#colorLiteral(red: 0.1892106831, green: 0.1867186129, blue: 0.2563015223, alpha: 1)))
-               
-                    .overlay(
-                        Circle()
-                            .trim(from: 0, to: 1)
-                            .stroke(style: StrokeStyle(lineWidth: 50, lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [20, 0], dashPhase: 0)
-                                   )
-                        
-                            .stroke(style: StrokeStyle(lineWidth: 30, lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [20, 0], dashPhase: 0)
-                                   )
-                    )
-                    .opacity(0.20)
-                    .frame(width: 190, height: 190)
-                
-                
-                Circle()
-                    .fill(Color.white)
+                    .fill(Color("Background"))
                     .frame(width: 260, height: 260)
                     .overlay(
                         Circle()
-                            .trim(from: 0, to: percent * 0.01)
-                            .stroke(style: StrokeStyle(lineWidth: 15, lineCap: .round, lineJoin: .round, miterLimit: .infinity, dash: [20, 0], dashPhase: 0)
-                                   )
-                            .fill(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.9942818284, green: 0, blue: 0.5605643392, alpha: 1)), Color(#colorLiteral(red: 1, green: 0.8352941176, blue: 0.6235294118, alpha: 1))]), startPoint: .topTrailing, endPoint: .bottomLeading))
-                    ).animation(.spring(response: 1.0, dampingFraction: 1, blendDuration: 10))
-                Text("pudimzando voce ").font(.system(size: 20))
+                            .trim(from: 0, to: percent)
+                            .stroke(style: StrokeStyle(lineWidth: 15, lineCap: .round, lineJoin:.round))
+                            .fill(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1, green: 0.7843137255, blue: 0.01568627451, alpha: 1)), Color(#colorLiteral(red: 0.9960784314, green: 0.8705882353, blue: 0.5294117647, alpha: 1)), Color(#colorLiteral(red: 0.4941176471, green: 0.2117647059, blue: 0.1254901961, alpha: 1))]), startPoint: .bottomLeading , endPoint: .topTrailing))
+                            .shadow(color: Color(#colorLiteral(red: 0.4941176471, green: 0.2117647059, blue: 0.1254901961, alpha: 1)), radius:100)
+                    )
                 
+                Text(loadingPhraseIndex)
+                    .font(.system(size: 20))
+                    .foregroundColor(Color.white)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 250, height: 100)
             }
+            HStack{
+                
+                Button{
+                    percent = 100
+                    
+                } label: {
+                    Text("Finish")
+                }
+                
+                Button{
+                    self.startLoading()
+                    self.randomPhrases()
+                } label: {
+                    Text("Start")
+                }
+            }
+            
         }
         
     }
-    
-    
+    func generationNumbers(){
+        
+    }
     func startLoading() {
         _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
             withAnimation() {
-                self.percent += 1
-                if self.percent >= 100.0 {
+                switch self.valor {
+                case 1:
+                    self.percent += 0.01
+                    print(valor)
+                case 2:
+                    self.percent += 0.01
+                    print(valor)
+                case 3:
+                    self.percent += 0.01
+                    print(valor)
+                case 4:
+                    self.percent += 0.01
+                    print(valor)
+                case 5:
+                    self.percent += 0.001
+                    print(valor)
+                default:
+                    self.percent += 0.01
+                    print(valor)
+                    
+                }                //self.percent += 0.001
+                if self.percent >= 5 {
                     timer.invalidate()
                 }
             }
+        }
+    }
+    
+    
+    func randomPhrases(){
+        _ = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: true) { timer in
+            self.nIndex += 1
+            self.nIndex = self.nIndex >= loadingPhrases.count ? 0 : self.nIndex
+            if self.percent >= 1 {
+                timer.invalidate()
+            }
+            self.loadingPhraseIndex = self.loadingPhrases[self.nIndex]
         }
     }
 }
