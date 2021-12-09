@@ -30,4 +30,13 @@ struct PudimTypes{
         "entediado",
         "triste"
     ]
+    
+//    let pudimArray: [String : String] = [
+//        "Pudim feliz"       : "Pudinzao-Feliz-2 1",
+//        "Pudim doidão"      : "Pudinzao-Doidão-2 1",
+//        "Pudim putaço"      : "Pudinzao-Putaço-2 1",
+//        "Pudim desconfiado" : "Pudinzao-Desconfiado-2 1",
+//        "Pudim triste"      : "Pudinzao-Triste-2 1",
+//        "Pudim vampiro"     : "Pudinzao-Vampiro-2 1",
+//    ]
 }

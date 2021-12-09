@@ -15,6 +15,8 @@ struct PudimzaoApp: App {
             ZStack{
                 bgcolor
                     .edgesIgnoringSafeArea(.all)
+                //ResultView()
+                //RingView()
                 MainView()
             }
         }

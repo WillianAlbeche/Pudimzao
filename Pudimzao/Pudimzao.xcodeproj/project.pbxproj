@@ -16,6 +16,7 @@
 		CD0417B42755443B00ED441B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0417B32755443B00ED441B /* Assets.xcassets */; };
 		CD0417B72755443B00ED441B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD0417B62755443B00ED441B /* Preview Assets.xcassets */; };
 		CD0417C02756960800ED441B /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0417BF2756960800ED441B /* RingView.swift */; };
+		CDDD6A5227626CC200BB7AD6 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD6A5127626CC000BB7AD6 /* ResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		CD0417B32755443B00ED441B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD0417B62755443B00ED441B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD0417BF2756960800ED441B /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		CDDD6A5127626CC000BB7AD6 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				CD0417BF2756960800ED441B /* RingView.swift */,
 				38197B1E2756A97B00857AAF /* MainView.swift */,
 				38197B202756B16C00857AAF /* ButtonModelView.swift */,
+				CDDD6A5127626CC000BB7AD6 /* ResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				38197B1D2756A96100857AAF /* PudimService.swift in Sources */,
 				CD0417B02755443A00ED441B /* PudimzaoApp.swift in Sources */,
 				38CE11B1275A9CD500CDA2AF /* MicrophoneMonitor.swift in Sources */,
+				CDDD6A5227626CC200BB7AD6 /* ResultView.swift in Sources */,
 				38197B1F2756A97B00857AAF /* MainView.swift in Sources */,
 				38197B1B2756A6C000857AAF /* PudimTypes.swift in Sources */,
 			);

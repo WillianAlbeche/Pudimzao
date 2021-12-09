@@ -43,27 +43,21 @@ struct RingView: View {
                     .multilineTextAlignment(.center)
                     .frame(width: 250, height: 100)
             }
+            
             HStack{
                 
                 Button{
-                    percent = 100
+                    print(self.percent)
                     
                 } label: {
                     Text("Finish")
                 }
-                
-                Button{
-                    self.startLoading()
-                    self.randomPhrases()
-                } label: {
-                    Text("Start")
-                }
             }
             
+        }.onAppear(){
+            self.startLoading()
+            self.randomPhrases()
         }
-        
-    }
-    func generationNumbers(){
         
     }
     func startLoading() {
@@ -90,7 +84,7 @@ struct RingView: View {
                     print(valor)
                     
                 }                //self.percent += 0.001
-                if self.percent >= 5 {
+                if self.percent >= 1 {
                     timer.invalidate()
                 }
             }
@@ -107,6 +101,7 @@ struct RingView: View {
             }
             self.loadingPhraseIndex = self.loadingPhrases[self.nIndex]
         }
+        
     }
 }
 

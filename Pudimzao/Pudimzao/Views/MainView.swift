@@ -9,7 +9,7 @@ import SwiftUI
 
 let numberOfSamples: Int = 10
 struct MainView: View {
-    @State var screen = 1
+    @State var screen = 2
     
     var body: some View {
         
@@ -19,7 +19,8 @@ struct MainView: View {
         case 2:
             PudimLoading(screen: $screen)
         case 3:
-            PudimTipos(screen: $screen)
+            Text("ola")
+            //PudimTipos(screen: $screen , valorTela: $valorTela)
         case 4:
             PudimScream(screen: $screen)
             
@@ -35,9 +36,7 @@ struct BarView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
-                .fill(LinearGradient(gradient: Gradient(colors: [Color("TitleColor1"), Color("TitleColor2")]),
-                                     startPoint: .top,
-                                     endPoint: .bottom))
+                .fill(LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1, green: 0.7843137255, blue: 0.01568627451, alpha: 1)), Color(#colorLiteral(red: 0.9960784314, green: 0.8705882353, blue: 0.5294117647, alpha: 1)), Color(#colorLiteral(red: 0.4941176471, green: 0.2117647059, blue: 0.1254901961, alpha: 1))]), startPoint: .bottomLeading , endPoint: .topTrailing))
                 .frame(width: (UIScreen.main.bounds.width - CGFloat(numberOfSamples) * 10) / CGFloat(numberOfSamples), height: value)
         }
     }
@@ -49,8 +48,9 @@ struct PudimAsk: View {
     @ObservedObject private var mic = MicrophoneMonitor(numberOfSamples: numberOfSamples)
     
     private func normalizeSoundLevel(level: Float) -> CGFloat {
-        let level = max(0.1, CGFloat(level) + 7) / 2 // between 0.1 and 25
-        if(level >= 2){
+        let level = max(0.1, CGFloat(level) + 40) / 2 // between 0.1 and 25
+        print(level)
+        if(1 >= 0.01){
             screen = 2
         }
 
@@ -84,9 +84,17 @@ struct PudimAsk: View {
 }
 
 struct PudimTipos: View {
-    @Binding var screen: Int
+    var valorTela: Int
     var body: some View {
-        Text("PudimTipos")
+        VStack{
+            if valorTela == 5{
+                ResultView2()
+            }
+            else{
+                ResultView()
+            }
+            
+        }
     }
 }
 
@@ -100,10 +108,18 @@ struct PudimScream: View {
 
 struct PudimLoading: View {
     @Binding var screen: Int
+    @State var valorTela: Int = RingView().valor
     var body: some View {
+        
         VStack{
 //            Text("voce é o pudim do(a) \(getPudimType())")
             RingView()
+            Text("\(RingView().valor)")
+                .foregroundColor(Color.white)
+            if RingView().percent == 1 {
+                PudimTipos(valorTela: valorTela)
+            }
+            
         }
     }
 }
@@ -112,7 +128,7 @@ struct PudimLoading: View {
 struct GradientText: View {
     @State var text: String
     @State var gradient:LinearGradient = LinearGradient(
-        gradient: Gradient(colors: [Color("TitleColor1"), Color("TitleColor2")]),
+        gradient: Gradient(colors: [Color(#colorLiteral(red: 1, green: 0.7843137255, blue: 0.01568627451, alpha: 1)), Color(#colorLiteral(red: 0.9960784314, green: 0.8705882353, blue: 0.5294117647, alpha: 1)), Color(#colorLiteral(red: 0.4941176471, green: 0.2117647059, blue: 0.1254901961, alpha: 1))]),
         startPoint: .top,
         endPoint: .bottom
     )
